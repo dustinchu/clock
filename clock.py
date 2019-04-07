@@ -3,7 +3,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 import requests
 sched = BlockingScheduler()
 
-@sched.scheduled_job('interval', minutes=200)
+@sched.scheduled_job('interval', minutes=400)
 def timed_job():
     r = requests.get('https://bankyou.herokuapp.com/news')
     print(r.text)
